@@ -1,0 +1,19 @@
+.action-text-container {
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+.action-text {
+  color: #EDF5E1;
+  font-size: 4em;
+  -webkit-transition: font-size 0.2s; /* For Safari 3.1 to 6.0 */
+  transition: font-size 0.2s;
+  
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Lobster', cursive;
+  
+}
+
+.action-text:hover {
+  font-size: 4.3em;
+  /* width: 100%; */
+}

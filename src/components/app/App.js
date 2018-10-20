@@ -29,7 +29,7 @@ class App extends Component {
     const { gameParams } = this.state;
     console.log('ummm.... not rendering?');
     return (
-      <div id="root-app">
+      <div id="root-app" className="App">
         <h2>Current Game Settings:
           { gameParams.no_library ? 'No Library' : ''},
           {gameParams.icebreak ? 'Icebreak' : ''}

@@ -1,12 +1,33 @@
 import React from 'react';
 import ShareBuilder from './action-builders/ShareBuilder';
+import './ActionText.css';
 
 const ACTIONS = ['share'];
+const BREAK_AT = 5;
 
 export default class ActionText extends React.Component {
+  static breakText(text) {
+    const breaker = text.split(' ');
+    let currIndex = 0;
+    const currArr = [];
+    while (currIndex - breaker.length) {
+      const thisArr = [];
+      for (let i = 0; i < BREAK_AT; i += 1) {
+        if (currIndex === breaker.length) {
+          break;
+        }
+        thisArr.push(breaker[currIndex]);
+        currIndex += 1;
+      }
+      currArr.push(thisArr.join(' '));
+    }
+
+    return currArr;
+  }
+
   state = {
     currentAction: undefined,
-    actionText: 'Press the button. I know you want to.',
+    actionText: 'Click me. I know you want to.',
   };
 
   static getMeFromArray(arr) {
@@ -37,11 +58,18 @@ export default class ActionText extends React.Component {
       share: new ShareBuilder(gameParams),
     };
 
+    const brokenText = ActionText.breakText(actionText);
+
     return (
-      <div id="action-text">
-        <span>{actionText}</span>
+      <div id="action-text" className="action-text-container">
+        <span
+          onClick={this.buttonHandler}
+          id="action-text--span"
+          className="action-text"
+        >
+          {brokenText.map(text => (<>{text}<br /></>))}
+        </span>
         <br />
-        <button type="button" onClick={this.buttonHandler}>Do it.</button>
       </div>
     );
   }
