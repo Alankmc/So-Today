@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ACTIONS, PLAYERS } from './constants';
+
+function getMe(list) {
+  return list[Math.floor(list.length * Math.random())];
+}
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      gameParams: {
+        NO_LIBRARY: false,
+        ICEBREAK: false,
+      },
+    };
+  }
+
   render() {
+    const { gameParams } = this.state;
+    const { NO_LIBRARY, ICEBREAK } = gameParams;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="root-app">
+        <h2>Current Game Settings: {NO_LIBRARY ? 'No Library' : ''}, {ICEBREAK ? 'Icebreak' : ''}</h2>
       </div>
     );
   }
