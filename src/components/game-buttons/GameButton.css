@@ -1,7 +1,7 @@
 .game-button-span {
   font-family: 'Lobster', cursive;
   font-size: 2em;
-  color: #05386B;
+  color: #C5C6C7;
   -webkit-transition: font-size 0.2s; /* For Safari 3.1 to 6.0 */
   transition: font-size 0.2s;
 }

@@ -34,7 +34,7 @@ export default class ActionText extends React.Component {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
-  buttonHandler = () => {
+  textClick = () => {
     const thisAction = ActionText.getMeFromArray(ACTIONS);
     let thisActionText;
     switch (thisAction) {
@@ -48,6 +48,7 @@ export default class ActionText extends React.Component {
         thisActionText = 'Uh whoops hang on';
         break;
     }
+    this.props.clickTick();
     this.setState({ actionText: thisActionText });
   }
 
@@ -64,7 +65,7 @@ export default class ActionText extends React.Component {
     return (
       <div id="action-text" className="action-text-container">
         <span
-          onClick={this.buttonHandler}
+          onClick={this.textClick}
           id="action-text--span"
           className="action-text"
         >
