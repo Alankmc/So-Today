@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/So-Today/static/js/runtime~main.a94adaa4.js"
   },
   {
-    "revision": "bd737ca227593b0c3863",
-    "url": "/So-Today/static/js/main.bd737ca2.chunk.js"
+    "revision": "c1aaaa4c089319ca19bf",
+    "url": "/So-Today/static/js/main.c1aaaa4c.chunk.js"
   },
   {
     "revision": "7fbce0f4112bb87f6a90",
     "url": "/So-Today/static/js/1.7fbce0f4.chunk.js"
   },
   {
-    "revision": "bd737ca227593b0c3863",
-    "url": "/So-Today/static/css/main.7d7b5b47.chunk.css"
+    "revision": "c1aaaa4c089319ca19bf",
+    "url": "/So-Today/static/css/main.a4ad6e1a.chunk.css"
   },
   {
-    "revision": "2c0364c1f52eb637619a0a2abcba8a57",
+    "revision": "60c74c3297dd719969962b6c94eb3102",
     "url": "/So-Today/index.html"
   }
 ];
