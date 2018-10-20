@@ -3,6 +3,22 @@
   margin-top: 5em;
 }
 
+.event-span {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  color: #45A29E;
+  -moz-animation: pulse 1s infinite;
+  -webkit-animation: pulse 1s infinite;
+  -o-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { font-size: 100% }
+  50% { font-size: 110% }
+  100% { font-size: 100% }
+}
+
 .button-container {
   width: 80%;
   margin: auto;
