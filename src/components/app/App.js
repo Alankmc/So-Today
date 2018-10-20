@@ -27,25 +27,23 @@ class App extends Component {
 
   render() {
     const { gameParams } = this.state;
-    console.log('ummm.... not rendering?');
+
     return (
       <div id="root-app" className="App">
-        <h2>Current Game Settings:
-          { gameParams.no_library ? 'No Library' : ''},
-          {gameParams.icebreak ? 'Icebreak' : ''}
-        </h2>
-        <GameButton
-          label="Not at the Library"
-          callback={this.handleParamClick}
-          type="no_library"
-          value={gameParams.no_library}
-        />
-        <GameButton
-          label="Socialize"
-          callback={this.handleParamClick}
-          type="icebreak"
-          value={gameParams.icebreak}
-        />
+        <div className="button-container">
+          <GameButton
+            label={{ on: 'I LOVE YELLING', off: 'shh we\'re at the library' }}
+            callback={this.handleParamClick}
+            type="no_library"
+            value={gameParams.no_library}
+          />
+          <GameButton
+            label={{ on: 'Party animal', off: 'Blushing introvert' }}
+            callback={this.handleParamClick}
+            type="icebreak"
+            value={gameParams.icebreak}
+          />
+        </div>
         <ActionText gameParams={gameParams} />
       </div>
     );

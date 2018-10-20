@@ -1,0 +1,16 @@
+.game-button-span {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  color: #05386B;
+  -webkit-transition: font-size 0.2s; /* For Safari 3.1 to 6.0 */
+  transition: font-size 0.2s;
+}
+
+.game-button-span:hover {
+  font-size: 2.3em;
+}
+
+.off {
+  opacity: 0.4;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}

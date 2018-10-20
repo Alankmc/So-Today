@@ -1,8 +1,16 @@
 import React from 'react';
+import './GameButton.css';
 
 export default function GameButton(props) {
   const {
     label, callback, value, type,
   } = props;
-  return (<button type="button" onClick={() => callback(type, !value)}>{label}</button>);
+  return (
+    <span
+      className={`game-button-span ${value ? '' : 'off'}`}
+      onClick={() => callback(type, !value)}
+    >
+      {value ? label.on : label.off}
+    </span>
+  );
 }

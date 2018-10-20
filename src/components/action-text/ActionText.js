@@ -1,8 +1,9 @@
 import React from 'react';
 import ShareBuilder from './action-builders/ShareBuilder';
 import './ActionText.css';
+import ChallengeBuilder from './action-builders/ChallengeBuilder';
 
-const ACTIONS = ['share'];
+const ACTIONS = ['share', 'challenge'];
 const BREAK_AT = 5;
 
 export default class ActionText extends React.Component {
@@ -26,7 +27,6 @@ export default class ActionText extends React.Component {
   }
 
   state = {
-    currentAction: undefined,
     actionText: 'Click me. I know you want to.',
   };
 
@@ -48,7 +48,7 @@ export default class ActionText extends React.Component {
         thisActionText = 'Uh whoops hang on';
         break;
     }
-    this.setState({ currentAction: thisAction, actionText: thisActionText });
+    this.setState({ actionText: thisActionText });
   }
 
   render() {
@@ -56,6 +56,7 @@ export default class ActionText extends React.Component {
     const { actionText } = this.state;
     this.builders = {
       share: new ShareBuilder(gameParams),
+      challenge: new ChallengeBuilder(gameParams),
     };
 
     const brokenText = ActionText.breakText(actionText);
