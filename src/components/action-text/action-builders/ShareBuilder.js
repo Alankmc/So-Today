@@ -3,20 +3,20 @@ import ActionBuilder from './ActionBuilder';
 export default class ShareBuilder extends ActionBuilder {
   constructor(currParams) {
     super(currParams);
-    console.log('Building with', currParams);
+
     this.name = 'Share';
     this.playerlessActions = {
-      base: ['share with the group'],
-      no_library: ['yell out'],
+      base: ['Share with the group'],
+      no_library: ['Yell out'],
       icebreak: [
-        'tell a stranger',
-        'text you tinder crush',
-        'text someone on your contact list',
+        'Tell a stranger',
+        'Text you tinder crush',
+        'Text someone on your contact list',
       ],
     };
 
     this.actions = {
-      base: ['whisper in the ear of'],
+      base: ['Whisper in the ear of'],
     };
 
     this.info = {
