@@ -1,9 +1,10 @@
 import React from 'react';
 import ShareBuilder from './action-builders/ShareBuilder';
-import './ActionText.css';
 import ChallengeBuilder from './action-builders/ChallengeBuilder';
+import './ActionText.css';
+import ArtistBuidler from './action-builders/ArtistBuidler';
 
-const ACTIONS = ['share', 'challenge'];
+const ACTIONS = ['share', 'challenge', 'artist'];
 const BREAK_AT = 5;
 
 export default class ActionText extends React.Component {
@@ -40,7 +41,7 @@ export default class ActionText extends React.Component {
     switch (thisAction) {
       case 'share':
       case 'challenge':
-      case 'act_out':
+      case 'artist':
         // Challenge has as ACTION - (PLAYER) - TEXT - INFO structure
         thisActionText = this.builders[thisAction].buildAction();
         break;
@@ -58,6 +59,7 @@ export default class ActionText extends React.Component {
     this.builders = {
       share: new ShareBuilder(gameParams),
       challenge: new ChallengeBuilder(gameParams),
+      artist: new ArtistBuidler(gameParams),
     };
 
     const brokenText = ActionText.breakText(actionText);

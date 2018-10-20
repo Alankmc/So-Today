@@ -3,8 +3,8 @@ import ActionText from '../action-text/ActionText';
 import GameButton from '../game-buttons/GameButtons';
 import './App.css';
 
-const VIKING_MASTER_CHANCE = 0.9;
-const QUESTION_MASTER_CHANCE = 0.9;
+const VIKING_MASTER_CHANCE = 0.2;
+const QUESTION_MASTER_CHANCE = 0.1;
 
 class App extends Component {
   constructor() {
