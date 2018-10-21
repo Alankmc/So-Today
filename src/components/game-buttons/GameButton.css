@@ -14,3 +14,14 @@
   opacity: 0.4;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
+
+
+@media only screen and (max-width: 768px) {
+  .game-button-span {
+    font-size: 18px;
+  }
+
+  .game-button-span:hover {
+    font-size: 20px;
+  }
+}

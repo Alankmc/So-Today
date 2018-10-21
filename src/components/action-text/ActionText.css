@@ -12,8 +12,17 @@
   font-family: 'Lobster', cursive;
   
 }
-
 .action-text:hover {
   font-size: 4.3em;
   /* width: 100%; */
+}
+
+@media only screen and (max-width: 768px) {
+  .action-text {
+    font-size: 30px;
+  }
+
+  .action-text:hover {
+    font-size: 33px;
+  }
 }
