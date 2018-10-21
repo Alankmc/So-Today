@@ -1,4 +1,6 @@
+/* global document */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CommentText.css';
 
 const commentary = [
@@ -56,7 +58,7 @@ export default class CommentText extends React.Component {
     const el = document.getElementById('comment-text-span');
     if (el) {
       el.classList.remove('animate');
-      void el.offsetWidth;
+      void el.offsetWidth; // eslint-disable-line
       el.classList.add('animate');
     }
     return (
@@ -66,3 +68,12 @@ export default class CommentText extends React.Component {
     );
   }
 }
+
+CommentText.propTypes = {
+  shouldRender: PropTypes.bool.isRequired,
+  overrideText: PropTypes.string,
+};
+
+CommentText.defaultProps = {
+  overrideText: undefined,
+};

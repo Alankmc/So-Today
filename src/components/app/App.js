@@ -17,6 +17,7 @@ class App extends Component {
         base: true,
         no_library: false,
         icebreak: false,
+        violence: false,
       },
       isViking: false,
       isQuestion: false,
@@ -66,6 +67,12 @@ class App extends Component {
             callback={this.handleParamClick}
             type="icebreak"
             value={gameParams.icebreak}
+          />
+          <GameButton
+            label={{ on: 'F*ck\'em up', off: 'Be nice to your friends, Timmy' }}
+            callback={this.handleParamClick}
+            type="violence"
+            value={gameParams.violence}
           />
         </div>
         <ActionText gameParams={gameParams} clickTick={this.clickTickHandler} />
