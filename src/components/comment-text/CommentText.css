@@ -1,0 +1,23 @@
+.comment-text {
+  color: #C5C6C7;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  right: 15%;
+  bottom: -50px;
+  position: absolute;
+}
+
+.comment-text.animate {
+  animation: up-down 2s;
+}
+
+@keyframes up-down {
+  0% { bottom: -50px; }
+  10% { bottom: 20px; }
+  90% { bottom: 20px; }
+  100% { bottom: -50px; }
+}
+
+.comment-text.up {
+  bottom: 30px
+}

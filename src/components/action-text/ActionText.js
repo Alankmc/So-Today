@@ -1,8 +1,8 @@
 import React from 'react';
 import ShareBuilder from './action-builders/ShareBuilder';
 import ChallengeBuilder from './action-builders/ChallengeBuilder';
-import './ActionText.css';
 import ArtistBuidler from './action-builders/ArtistBuidler';
+import './ActionText.css';
 
 const ACTIONS = ['share', 'challenge', 'artist'];
 const BREAK_AT = 5;

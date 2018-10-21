@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import ActionText from '../action-text/ActionText';
 import GameButton from '../game-buttons/GameButtons';
 import './App.css';
+import CommentText from '../comment-text/CommentText';
 
 const VIKING_MASTER_CHANCE = 0.2;
 const QUESTION_MASTER_CHANCE = 0.1;
+const COMMENTARY_CHANCE = 1;
 
 class App extends Component {
   constructor() {
     super();
-
+    this.ticked = false;
     this.state = {
       gameParams: {
         base: true,
@@ -37,12 +39,19 @@ class App extends Component {
       isViking: isViking ? false : Math.random() < VIKING_MASTER_CHANCE,
       isQuestion: isQuestion ? false : Math.random() < QUESTION_MASTER_CHANCE,
     });
+    this.ticked = true;
   }
 
   render() {
-    const { isViking, isQuestion } = this.state;
-    const { gameParams } = this.state;
-    console.log(this.state);
+    const {
+      isViking, isQuestion, gameParams,
+    } = this.state;
+
+    const tickOnce = this.ticked;
+    if (this.ticked) {
+      this.ticked = false;
+    }
+
     return (
       <div id="root-app" className="App">
         <div className="button-container">
@@ -53,7 +62,7 @@ class App extends Component {
             value={gameParams.no_library}
           />
           <GameButton
-            label={{ on: 'Party animal', off: 'Blushing introvert' }}
+            label={{ on: 'Linkedin master', off: 'Blushing introvert' }}
             callback={this.handleParamClick}
             type="icebreak"
             value={gameParams.icebreak}
@@ -61,7 +70,8 @@ class App extends Component {
         </div>
         <ActionText gameParams={gameParams} clickTick={this.clickTickHandler} />
         {isQuestion ? (<div><span className="event-span">Player has become Questionmaster</span><br /></div>) : null}
-        {isViking ? (<span className="event-span">Player has become Vikingmaster</span>) : null}
+        {isViking ? (<div><span className="event-span">Player has become Vikingmaster</span><br /></div>) : null}
+        <CommentText shouldRender={tickOnce && Math.random() < COMMENTARY_CHANCE} />
       </div>
     );
   }
