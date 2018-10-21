@@ -93,7 +93,7 @@ export default class ArtistBuidler extends ActionBuilder {
     }
 
     if (!chosenAction.isPlayerless) {
-      fullAction += `, with ${ActionBuilder.getPlayer()} as co-star`;
+      fullAction += `, with ${ActionBuilder.getPlayer()} as co-star.`;
     }
 
     return fullAction;

@@ -1,0 +1,76 @@
+.config-button {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+  color: #C5C6C7;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.config-button.unflipped {
+  /* transform: rotate(180deg); */
+  animation: 0.2s unflip linear;
+}
+
+.config-button.flipped {
+  /* transform: rotate(0deg); */
+  animation: 0.2s flip linear;
+}
+
+@keyframes flip {
+  0%   { -webkit-transform: rotate(0deg); }
+  15%   { -webkit-transform: rotate(-20deg); }
+  20%   { -webkit-transform: rotate(-25deg); }
+  80%  { -webkit-transform: rotate(205deg); }
+  85%   { -webkit-transform: rotate(200deg); }
+  100% { -webkit-transform: rotate(180deg); }
+} 
+/* 
+@keyframes flip {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(180deg);}
+}
+
+@keyframes unflip {
+  0% {-webkit-transform: rotate(180deg);}
+  100% {-webkit-transform: rotate(0deg);}
+} */
+
+
+@keyframes unflip {
+  0%   { -webkit-transform: rotate(180deg); }
+  15%   { -webkit-transform: rotate(200deg); }
+  20%   { -webkit-transform: rotate(205deg); }
+  80%  { -webkit-transform: rotate(-25deg); }
+  85%   { -webkit-transform: rotate(-20deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+.button-container {
+  top:-200px;
+  visibility: hidden;
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 5em;
+  margin-bottom: 4em;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s; /* Safari */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.button-container.open {
+  visibility: visible;
+  top: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  .config-button {
+    font-size: 15px;
+  }
+}
