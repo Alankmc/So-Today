@@ -21,3 +21,9 @@
 .comment-text.up {
   bottom: 30px
 }
+
+@media only screen and (max-width: 768px) {
+  .comment-text {
+    font-size: 19px;
+  }
+}
