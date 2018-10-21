@@ -7,6 +7,27 @@
 }
 
 .event-span {
+  position: absolute;
+  bottom:20%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: #45A29E;
+  -moz-animation: pulse 1s infinite;
+  -webkit-animation: pulse 1s infinite;
+  -o-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+}
+.event-span.lower {
+  position: absolute;
+  bottom:15%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   font-family: 'Lobster', cursive;
   font-size: 25px;
   color: #45A29E;
@@ -20,13 +41,4 @@
   0% { font-size: 25px }
   50% { font-size: 28px }
   100% { font-size: 25px }
-}
-
-.button-container {
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 5em;
-  margin-bottom: 4em;
 }
