@@ -1,13 +1,13 @@
 {
-  "main.css": "/So-Today/static/css/main.ce9a9afc.chunk.css",
-  "main.js": "/So-Today/static/js/main.7df8a9f7.chunk.js",
-  "main.js.map": "/So-Today/static/js/main.7df8a9f7.chunk.js.map",
+  "main.css": "/So-Today/static/css/main.e8c39aac.chunk.css",
+  "main.js": "/So-Today/static/js/main.8d42ed06.chunk.js",
+  "main.js.map": "/So-Today/static/js/main.8d42ed06.chunk.js.map",
   "static/js/1.009c4c8f.chunk.js": "/So-Today/static/js/1.009c4c8f.chunk.js",
   "static/js/1.009c4c8f.chunk.js.map": "/So-Today/static/js/1.009c4c8f.chunk.js.map",
   "runtime~main.js": "/So-Today/static/js/runtime~main.a94adaa4.js",
   "runtime~main.js.map": "/So-Today/static/js/runtime~main.a94adaa4.js.map",
-  "static/css/main.ce9a9afc.chunk.css.map": "/So-Today/static/css/main.ce9a9afc.chunk.css.map",
+  "static/css/main.e8c39aac.chunk.css.map": "/So-Today/static/css/main.e8c39aac.chunk.css.map",
   "index.html": "/So-Today/index.html",
-  "precache-manifest.ec2c5bbc0b11831960e5528486116734.js": "/So-Today/precache-manifest.ec2c5bbc0b11831960e5528486116734.js",
+  "precache-manifest.592df538ec8beecc7cc2f935074dd368.js": "/So-Today/precache-manifest.592df538ec8beecc7cc2f935074dd368.js",
   "service-worker.js": "/So-Today/service-worker.js"
 }
