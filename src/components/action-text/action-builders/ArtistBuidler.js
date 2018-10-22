@@ -41,7 +41,7 @@ export default class ArtistBuidler extends ActionBuilder {
         'a country song',
         'a sad song',
         'a song in another language',
-        'The Killers\' Mr. Brightside',
+        'a TV theme song',
       ],
     };
 
@@ -54,6 +54,7 @@ export default class ArtistBuidler extends ActionBuilder {
         'receiving horrible news',
         'discovering you won the lottery',
         'going fishing',
+        'a presidential announcement about a new law',
       ],
     };
 
@@ -64,10 +65,16 @@ export default class ArtistBuidler extends ActionBuilder {
         'your breakup',
         'two bros in the gym',
         'two straight guys at the bar',
+        'a Mexican drama cheating discovery',
+        'a weed-induced discovery about the universe',
       ],
       no_library: [
         'going into labor',
         'a loud, almost-violent argument',
+        'a dragonball Kamehameha clash',
+      ],
+      violence: [
+        'a kung-fu fighting sequence',
       ],
     };
   }

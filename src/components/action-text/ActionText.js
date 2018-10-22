@@ -4,6 +4,7 @@ import ChallengeBuilder from './action-builders/ChallengeBuilder';
 import ArtistBuidler from './action-builders/ArtistBuidler';
 import ViolenceBuilder from './action-builders/ViolenceBuilder';
 import './ActionText.css';
+import PartyBitsBuilder from './action-builders/PartyBitsBuilder';
 
 const ACTIONS = ['share', 'challenge', 'artist', 'violence'];
 const BREAK_AT = 5;
@@ -44,6 +45,7 @@ export default class ActionText extends React.Component {
       case 'challenge':
       case 'artist':
       case 'violence':
+      case 'party_bits':
         // Challenge has as ACTION - (PLAYER) - TEXT - INFO structure
         thisActionText = this.builders[thisAction].buildAction();
         break;
@@ -63,6 +65,7 @@ export default class ActionText extends React.Component {
       challenge: new ChallengeBuilder(gameParams),
       artist: new ArtistBuidler(gameParams),
       violence: new ViolenceBuilder(gameParams),
+      party_bits: new PartyBitsBuilder(gameParams),
     };
 
     const brokenText = ActionText.breakText(actionText);
