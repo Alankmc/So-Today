@@ -11,6 +11,8 @@ const PLAYERS = [
   'the last player',
   'your date',
   'your friend',
+  'the drunkest player',
+  'the soberest player',
 ];
 
 export default class ActionBuilder {

@@ -62,9 +62,11 @@ export default class CommentText extends React.Component {
       el.classList.add('animate');
     }
     return (
-      <span className="comment-text animate" id="comment-text-span">
-        {overrideText || CommentText.getMeFromArray(commentary)}
-      </span>
+      <div className="comment-text-container">
+        <span className="comment-text animate" id="comment-text-span">
+          {overrideText || CommentText.getMeFromArray(commentary)}
+        </span>
+      </div>
     );
   }
 }
