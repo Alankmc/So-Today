@@ -7,6 +7,13 @@ import './ActionText.css';
 import PartyBitsBuilder from './action-builders/PartyBitsBuilder';
 
 const ACTIONS = ['share', 'challenge', 'artist', 'violence'];
+const WEIGHTS = [3, 4, 4, 3];
+const weightSum = WEIGHTS.reduce((cum, curr) => cum + curr);
+let buff = 0;
+const stdWeights = WEIGHTS.map((el) => {
+  buff += el / weightSum;
+  return buff;
+});
 const BREAK_AT = 5;
 
 export default class ActionText extends React.Component {
@@ -37,8 +44,16 @@ export default class ActionText extends React.Component {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
+  static getMeFromWeightedArray(arr, weights) {
+    const thisRand = Math.random();
+
+    return arr[weights.findIndex(el => el > thisRand)];
+  }
+
   textClick = () => {
-    const thisAction = ActionText.getMeFromArray(ACTIONS);
+    const { clickTick } = this.props;
+
+    const thisAction = ActionText.getMeFromWeightedArray(ACTIONS, stdWeights);
     let thisActionText;
     switch (thisAction) {
       case 'share':
@@ -53,7 +68,7 @@ export default class ActionText extends React.Component {
         thisActionText = 'Uh whoops hang on';
         break;
     }
-    this.props.clickTick();
+    clickTick();
     this.setState({ actionText: thisActionText });
   }
 
@@ -77,7 +92,7 @@ export default class ActionText extends React.Component {
           id="action-text--span"
           className="action-text"
         >
-          {brokenText.map(text => (<>{text}<br /></>))}
+          {brokenText.map(text => (<div key={text}>{text}<br /></div>))}
         </span>
         <br />
       </div>
