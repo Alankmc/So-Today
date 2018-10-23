@@ -23,7 +23,7 @@ export default class ImpressionBuilder extends ActionBuilder {
         'Mickey Mouse',
         'Obama',
         'Donald Trump',
-        'Matthew McConaghey',
+        'Matthew McConaughey',
         'someone from Friends',
         'a chicken',
         'a donkey',
