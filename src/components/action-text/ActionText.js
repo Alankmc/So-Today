@@ -3,11 +3,12 @@ import ShareBuilder from './action-builders/ShareBuilder';
 import ChallengeBuilder from './action-builders/ChallengeBuilder';
 import ArtistBuidler from './action-builders/ArtistBuidler';
 import ViolenceBuilder from './action-builders/ViolenceBuilder';
-import './ActionText.css';
 import PartyBitsBuilder from './action-builders/PartyBitsBuilder';
+import ImpressionBuilder from './action-builders/ImpressionBuilder';
+import './ActionText.css';
 
-const ACTIONS = ['share', 'challenge', 'artist', 'violence'];
-const WEIGHTS = [3, 4, 4, 3];
+const ACTIONS = ['share', 'challenge', 'artist', 'violence', 'impression'];
+const WEIGHTS = [3, 4, 4, 3, 2];
 const weightSum = WEIGHTS.reduce((cum, curr) => cum + curr);
 let buff = 0;
 const stdWeights = WEIGHTS.map((el) => {
@@ -61,6 +62,7 @@ export default class ActionText extends React.Component {
       case 'artist':
       case 'violence':
       case 'party_bits':
+      case 'impression':
         // Challenge has as ACTION - (PLAYER) - TEXT - INFO structure
         thisActionText = this.builders[thisAction].buildAction();
         break;
@@ -81,6 +83,7 @@ export default class ActionText extends React.Component {
       artist: new ArtistBuidler(gameParams),
       violence: new ViolenceBuilder(gameParams),
       party_bits: new PartyBitsBuilder(gameParams),
+      impression: new ImpressionBuilder(gameParams),
     };
 
     const brokenText = ActionText.breakText(actionText);

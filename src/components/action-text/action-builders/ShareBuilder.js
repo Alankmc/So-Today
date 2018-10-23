@@ -23,9 +23,10 @@ export default class ShareBuilder extends ActionBuilder {
       base: [
         'how your last shit was, in grand detail',
         'something noone in the group knows',
-        'your favorite pokemon',
+        'what your favorite pokemon is',
         'the name of your least favorite person in the group',
         'who you\'re voting for',
+        'your biggest fear',
       ],
     };
   }

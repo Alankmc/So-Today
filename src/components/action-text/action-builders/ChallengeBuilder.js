@@ -23,6 +23,14 @@ export default class ChallengeBuilder extends ActionBuilder {
         'to a friendly wrestle',
         'to a "don\'t breathe" race',
         'to a "don\'t laugh" race',
+        'to a modeling runway walkoff',
+        'to a dance competition',
+        'to a beatboxing show-off',
+        'to a joke competition',
+        'to a Rock Paper Scissors showdown',
+      ],
+      violence: [
+        'to a sumo brawl',
       ],
     };
   }
