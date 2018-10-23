@@ -72,6 +72,7 @@ export default class ArtistBuidler extends ActionBuilder {
         'going into labor',
         'a loud, almost-violent argument',
         'a dragonball Kamehameha clash',
+        'a slowmo Matrix style brawl, with sound effects',
       ],
       violence: [
         'a kung-fu fighting sequence',
@@ -101,6 +102,8 @@ export default class ArtistBuidler extends ActionBuilder {
 
     if (!chosenAction.isPlayerless) {
       fullAction += `, with ${ActionBuilder.getPlayer()} as co-star.`;
+    } else {
+      fullAction += '.';
     }
 
     return fullAction;
