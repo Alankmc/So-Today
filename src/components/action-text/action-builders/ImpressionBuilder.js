@@ -39,6 +39,10 @@ export default class ImpressionBuilder extends ActionBuilder {
         'Owen Wilson\'s "wow"',
         'a valley girl',
         'Bruce Lee',
+        'James Bond',
+        'Hermione',
+        'a dog',
+        'a very small dog',
       ],
     };
   }

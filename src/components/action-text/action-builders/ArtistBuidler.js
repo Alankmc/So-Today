@@ -67,6 +67,7 @@ export default class ArtistBuidler extends ActionBuilder {
         'two straight guys at the bar',
         'a Mexican drama cheating discovery',
         'a weed-induced discovery about the universe',
+        'Star Wars\' "I Am Your Father" scene',
       ],
       no_library: [
         'going into labor',
