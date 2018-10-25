@@ -7,10 +7,23 @@ export default class PartyBitsBuilder extends ActionBuilder {
     this.name = 'Party Bits';
     this.playerlessActions = {
       base: [
-        '',
+        'Finish you drink. Now',
+        'Take a breather. You get nothing',
+        'Everyone shh. A minute of silence for your collective dignity',
+        'Hugs everywhere. Everyone go around hugging',
+        'Take your shoes off',
+        'Hey, let\'s all propose a toast. Make a speech',
+      ],
+      violence: [
+        'Public enemy #1. Everyone hits you',
       ],
     };
-    this.actions = {};
+    this.actions = {
+      base: [
+        'Throw your drink on ',
+        'Exchange an article of clothing with',
+      ],
+    };
   }
 
   buildAction() {

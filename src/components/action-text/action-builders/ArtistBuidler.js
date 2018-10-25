@@ -67,12 +67,14 @@ export default class ArtistBuidler extends ActionBuilder {
         'two straight guys at the bar',
         'a Mexican drama cheating discovery',
         'a weed-induced discovery about the universe',
+        'Star Wars\' "I Am Your Father" scene',
       ],
       no_library: [
         'going into labor',
         'a loud, almost-violent argument',
-        'a dragonball Kamehameha clash',
+        'a DragonBall Kamehameha clash',
         'a slowmo Matrix style brawl, with sound effects',
+        'a samurai standoff',
       ],
       violence: [
         'a kung-fu fighting sequence',

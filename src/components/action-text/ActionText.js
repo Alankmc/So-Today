@@ -6,9 +6,10 @@ import ViolenceBuilder from './action-builders/ViolenceBuilder';
 import PartyBitsBuilder from './action-builders/PartyBitsBuilder';
 import ImpressionBuilder from './action-builders/ImpressionBuilder';
 import './ActionText.css';
+import ModifierBuilder from './action-builders/ModifierBuilder';
 
-const ACTIONS = ['share', 'challenge', 'artist', 'violence', 'impression'];
-const WEIGHTS = [3, 4, 4, 3, 2];
+const ACTIONS = ['share', 'challenge', 'artist', 'violence', 'impression', 'modifier', 'party_bits'];
+const WEIGHTS = [3, 4, 4, 3, 3, 4, 4];
 const weightSum = WEIGHTS.reduce((cum, curr) => cum + curr);
 let buff = 0;
 const stdWeights = WEIGHTS.map((el) => {
@@ -51,6 +52,12 @@ export default class ActionText extends React.Component {
     return arr[weights.findIndex(el => el > thisRand)];
   }
 
+  setCountdown = (value) => {
+    if (!this.countdown) {
+      this.countdown = value;
+    }
+  }
+
   textClick = () => {
     const { clickTick } = this.props;
 
@@ -63,12 +70,21 @@ export default class ActionText extends React.Component {
       case 'violence':
       case 'party_bits':
       case 'impression':
+      case 'modifier':
         // Challenge has as ACTION - (PLAYER) - TEXT - INFO structure
         thisActionText = this.builders[thisAction].buildAction();
         break;
       default:
         thisActionText = 'Uh whoops hang on';
         break;
+    }
+
+    if (this.countdown) {
+      this.countdown -= 1;
+      if (this.countdown <= 0) {
+        this.countdown = null;
+        thisActionText = 'Ok, that\'s enough. The player can stop doing the thing.';
+      }
     }
     clickTick();
     this.setState({ actionText: thisActionText });
@@ -84,6 +100,7 @@ export default class ActionText extends React.Component {
       violence: new ViolenceBuilder(gameParams),
       party_bits: new PartyBitsBuilder(gameParams),
       impression: new ImpressionBuilder(gameParams),
+      modifier: new ModifierBuilder(gameParams, this.setCountdown),
     };
 
     const brokenText = ActionText.breakText(actionText);

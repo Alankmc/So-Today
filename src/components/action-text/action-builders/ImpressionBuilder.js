@@ -29,6 +29,7 @@ export default class ImpressionBuilder extends ActionBuilder {
         'a donkey',
         'a horse',
         'a monkey',
+        'an elephant',
         'some Pixar character',
         'someone from a Tarantino movie',
         'the Godfather',
@@ -39,6 +40,10 @@ export default class ImpressionBuilder extends ActionBuilder {
         'Owen Wilson\'s "wow"',
         'a valley girl',
         'Bruce Lee',
+        'James Bond',
+        'Hermione',
+        'a dog',
+        'a very small dog',
       ],
     };
   }
