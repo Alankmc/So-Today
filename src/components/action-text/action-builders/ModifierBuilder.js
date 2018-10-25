@@ -15,10 +15,12 @@ export default class ModifierBuilder extends ActionBuilder {
         'Wrap yourself in toilet paper',
         'Speak like batman',
         'Speak in a different accent',
-        'You are a movie villain',
-        'You are a pirate',
-        'You are a fatcat billionaire',
+        'Act like a movie villain',
+        'Act like a pirate',
+        'Act like a fatcat billionaire',
         'You are mute',
+        'Act like royalty',
+        'Act like the president',
       ],
     };
     this.actions = {};
@@ -26,9 +28,12 @@ export default class ModifierBuilder extends ActionBuilder {
       base: [
         'until the next round',
         'for 5 minutes',
+        'for 6 minutes',
+        'for 7 minutes',
         'for a minute',
         'for 2 rounds',
         'until all players agree you should stop',
+        'until you finish your drink',
         COUNTDOWN,
       ],
     };

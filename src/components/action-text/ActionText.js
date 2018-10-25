@@ -9,7 +9,7 @@ import './ActionText.css';
 import ModifierBuilder from './action-builders/ModifierBuilder';
 
 const ACTIONS = ['share', 'challenge', 'artist', 'violence', 'impression', 'modifier', 'party_bits'];
-const WEIGHTS = [3, 4, 4, 3, 2, 4, 3];
+const WEIGHTS = [3, 4, 4, 3, 3, 4, 4];
 const weightSum = WEIGHTS.reduce((cum, curr) => cum + curr);
 let buff = 0;
 const stdWeights = WEIGHTS.map((el) => {

@@ -29,6 +29,7 @@ export default class ImpressionBuilder extends ActionBuilder {
         'a donkey',
         'a horse',
         'a monkey',
+        'an elephant',
         'some Pixar character',
         'someone from a Tarantino movie',
         'the Godfather',

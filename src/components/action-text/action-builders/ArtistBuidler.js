@@ -72,8 +72,9 @@ export default class ArtistBuidler extends ActionBuilder {
       no_library: [
         'going into labor',
         'a loud, almost-violent argument',
-        'a dragonball Kamehameha clash',
+        'a DragonBall Kamehameha clash',
         'a slowmo Matrix style brawl, with sound effects',
+        'a samurai standoff',
       ],
       violence: [
         'a kung-fu fighting sequence',

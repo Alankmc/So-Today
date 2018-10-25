@@ -12,6 +12,7 @@ export default class PartyBitsBuilder extends ActionBuilder {
         'Everyone shh. A minute of silence for your collective dignity',
         'Hugs everywhere. Everyone go around hugging',
         'Take your shoes off',
+        'Hey, let\'s all propose a toast. Make a speech',
       ],
       violence: [
         'Public enemy #1. Everyone hits you',

@@ -7,11 +7,12 @@ export default class ViolenceBuilder extends ActionBuilder {
     this.name = 'Violence';
     this.playerlessActions = {};
     this.actions = {
-      base: ['Poke'],
+      base: ['Poke', 'Pinch', 'Pay'],
       violence: [
         'Punch',
         'Kick',
         'Slap',
+        'Bite',
       ],
     };
 
